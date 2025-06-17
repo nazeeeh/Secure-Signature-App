@@ -3,6 +3,8 @@ import { Box } from '@mui/material';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
+import { Outlet } from 'react-router-dom';
+
 
 const Layout = ({ children }) => {
   return (
@@ -21,7 +23,7 @@ const Layout = ({ children }) => {
                 : theme.palette.grey[900]
           }}
         >
-          {children}
+         <Outlet />
         </Box>
       </Box>
       <Footer />

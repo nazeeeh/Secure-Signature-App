@@ -34,7 +34,8 @@ const Login = () => {
   const handleSubmit = async (values) => {
     try {
       const result = await login(values.email, values.password);
-      
+      console.log('Login result:', result);
+      setError(''); // Clear any previous error
       if (result.mfaRequired) {
         setMfaRequired(true);
         setTempToken(result.tempToken);

@@ -39,6 +39,7 @@ exports.generateKeyPair = async (req, res) => {
     });
   } catch (err) {
     console.error(err.message);
+    console.error('Error in generateKeyPair:', err.stack);
     res.status(500).send('Server error');
   }
 };
